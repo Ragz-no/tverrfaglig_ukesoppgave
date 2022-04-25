@@ -1,0 +1,22 @@
+{
+  "name": "tverrfalig_ukesoppgave",
+  "description": "",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ragz-no/tverrfaglig_ukesoppgave.git"
+  },
+  "author": "Ram",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ragz-no/tverrfaglig_ukesoppgave/issues"
+  },
+  "homepage": "https://github.com/Ragz-no/tverrfaglig_ukesoppgave#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
