@@ -1,28 +1,28 @@
-<%-include("partials/header-signin.ejs");-%>
-
-<form class="form-signin">
-    <img class="mb-4" src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
-    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-
-    <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-      <label for="floatingInput">Email address</label>
+<%- include('partials/header') %>
+  <div class="jumbotron centered">
+    <div class="container">
+      <i class="fab fa-phoenix-framework fa-6x"></i>
+      <h1 class="display-3">Dokumentasjon av rammeverk</h1>
+      <hr>
+    <div class="brukte-rammeverk">
+      <p class="lead">Brukte Rammeverk</p>
+        <li>Bootstrap</li>
+        <li>Node.js</li>
+        <li>Fontawesome</li>
+        <li>Mongoose</li>
+        <li>MongoDB</li>
+      </div>
+      <hr>
+    <div class="sikkerhet">
+        <p class="lead">Risikoanalyse</p>
+        <li>Sjekker om brukeren finnes i DB for å komme til secret</li>
+        <li>Bruker DB encryption</li>
+        <li>Bruker Mongoose encryption</li>
     </div>
-    <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-      <label for="floatingPassword">Password</label>
+      <hr>  
+      <p class="lead">Dokumentasjon</p>
+      <a class="btn btn-dark btn-lg" href="/login" role="button">Logg inn side</a>
     </div>
+  </div>
 
-    <div class="checkbox mb-3">
-      <label>
-        <input type="checkbox" value="remember-me"> Remember me
-      </label>
-    </div>
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-    <p class="mt-5 mb-3 text-muted">© 2022 - Ram</p>
-  </form>
-
-
-
-
-<%-include("partials/footer.ejs");-%>
+  <%- include('partials/footer') %>

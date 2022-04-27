@@ -1,0 +1,46 @@
+<%-include("partials/header-signin.ejs");-%>
+
+<form class="form-signin">
+    <img class="mb-4 bilde" src="Img/Huggern.png" alt="" width="72" height="57">
+    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+    <div class="form-floating">
+      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <label for="floatingPassword">Password</label>
+    </div>
+
+    <a href="#" class="btn btn-dark"onclick="signOut();">Sign out</a>
+    <div class="g-signin2 btn" data-onsuccess="onSignIn"></div>
+
+    <p class="mt-5 mb-3 text-muted">© 2022 - Ram</p>
+  </form>
+  
+
+    <script>
+
+    function onSignIn(googleUser) {
+      var profile = googleUser.getBasicProfile();
+        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+        console.log('Name: ' + profile.getName());
+        console.log('Image URL: ' + profile.getImageUrl());
+        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+    }
+    </script>
+
+
+
+<script>
+    function signOut() {
+      var auth2 = gapi.auth2.getAuthInstance();
+      auth2.signOut().then(function () {
+        console.log('User signed out.');
+      });
+    }
+  </script>
+
+
+<%-include("partials/footer.ejs");-%>
