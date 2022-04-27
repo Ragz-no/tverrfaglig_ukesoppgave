@@ -1,2 +1,3 @@
+# ignorer filene som står nedenfor
 node_modules
 .env
