@@ -25,7 +25,7 @@ app.use(express.json()); // sender JSON til backend server
 app.use(cookieParser()); // lagrer uesr access user token
 
 
-app.use(express.static("public")); // for å bruke statiske filer fra public folder
+app.use(express.static((__dirname,"public"))); // for å bruke statiske filer fra public folder
 
 //get request for å få sidene til å bli vist på localhost
 app.get("/", (req, res) =>{
