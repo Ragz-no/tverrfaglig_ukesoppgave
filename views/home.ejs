@@ -1,28 +1,57 @@
 <%- include('partials/header') %>
-  <div class="jumbotron centered">
-    <div class="container">
-      <i class="fab fa-phoenix-framework fa-6x"></i>
-      <h1 class="display-3">Dokumentasjon av rammeverk</h1>
-      <hr>
+  <div class="container">
+    <h1 class="display-3">Dokumentasjon av rammeverk<i class="fab fa-phoenix-framework fa-2x"></i></h1>
+    <hr>
     <div class="brukte-rammeverk">
-      <p class="lead">Brukte Rammeverk</p>
-        <li>Bootstrap</li>
-        <li>Node.js</li>
-        <li>Fontawesome</li>
-        <li>Mongoose</li>
-        <li>MongoDB</li>
-      </div>
-      <hr>
-    <div class="sikkerhet">
-        <p class="lead">Risikoanalyse</p>
-        <li>Sjekker om brukeren finnes i DB for å komme til secret</li>
-        <li>Bruker DB encryption</li>
-        <li>Bruker Mongoose encryption</li>
+      <p class="lead"><b>Brukte Rammeverk</b></p>
+      <li>Bootstrap</li>
+      <li>Node.js</li>
+      <li>Fontawesome</li>
     </div>
-      <hr>  
-      <p class="lead">Dokumentasjon</p>
-      <a class="btn btn-dark btn-lg" href="/login" role="button">Logg inn side</a>
-    </div>
+    <hr>
+    <section class="Risikoanalyse">
+      <p class="lead"><b>Risikoanalyse</b></p>
+      <li>Sjekker om brukeren finnes er authenticated for å komme til dashboard</li>
+      <li>Bruker Google auth, for å authenticate brukere</li>
+      <li>Bruker cookie parser for å få en session token</li>
+    </section>
+    <hr>
+    <section class="Rammeverk">
+      <p class="lead"><b>Rammeverksdokumentet belyser</b></p>
+      <p>Jeg bestemte meg for å bruke Google authentication rammeverket,<br>
+        fordi jeg tenkte det var det enkleste å bruke siden Angela viste hvordan <br>
+        man gjorde det i kurset og tenkte at jeg kunne følge henne men det gikk <br>
+        ikke så bra siden alt var outdatet og deprecated, så jeg valgte å følge <br>
+        YT tutorial som funka greit der jeg forsto det meste. Alt i alt var ikke <br>
+        det så vanskelig å ta i bruke Google sitt rammeverk siden man trenger bare <br>
+        nesten trenger å lese docsa til google authentication. </p>
+    </section>
+    <hr>
+    <section class="løsninger">
+      <p class="lead"><b>Begrunnelse på valgte løsninger</b></p>
+      <p>Jeg valgte å bruke Node.js rammeverket for å ta i bruk google sitt api rammeverk, <br>
+        slik at authentication pop up dukker opp og redirecter meg til en annen side, <br>
+        når bruker er authenticated, jeg valgte å bruke bootstrap fordi da slipper å <br>
+        skrive inn masse kode for å lage form på /login routen. Siden jeg bruker node.js <br>
+        kan ikke GitHub hoste nettsiden min siden den ikke er statisk lenger, så da valgte <br>
+        jeg å hoste den på heroku for å så fikse DNS med mitt eget domenenavn. </p>
+    </section>
+    <hr>
+    <section class="prosjektmetodikk">
+      <p class="lead"><b>Forklaring på hvorfor prosjektmetodikk er viktig</b></p>
+    </section>
+    <hr>
+    <section class="konfigurasjon">
+      <p class="lead"><b>Dokumentasjon av valgt produksjonsløsning som er strukturert</b></p>
+    <hr>  
+      <p class="lead"><b>Dokumentasjon av valgt utviklingsløsning som er strukturert</b></p>
+    </section>
+    <hr>
+    <section class="sikkerhet-rammeverk">
+      <p class="lead"><b>Sikkerheten til Google authentication</b></p>
+    </section>
+    <a class="btn btn-dark btn-lg" href="/login" role="button">Logg inn side</a>
+  </div>
   </div>
 
   <%- include('partials/footer') %>
