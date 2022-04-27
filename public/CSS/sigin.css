@@ -8,9 +8,10 @@ body {
   align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #f5f5f5;
+  background-color: #A7ABDD;
 }
 
+/* Alt som har med form å gjøre har form i seg */
 .form-signin {
   width: 100%;
   max-width: 330px;
@@ -38,6 +39,13 @@ body {
   border-top-right-radius: 0;
 }
 
+/* alt annet en form signeringskjema */
+
 .bilde {
-  height: 100px;
+  height: 200px;
+  width: 200px;
+}
+
+.title-text, .footer-text  {
+  color: #0e0e0e;
 }
