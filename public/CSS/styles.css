@@ -2,3 +2,14 @@ html {
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+    background: #A7ABDD;
+}
+
+.btn-signout-dashboard {
+    margin-left: 20%;
+}
+
+.user-picture {
+    margin-left: 10%;
+}
