@@ -22,6 +22,7 @@
     "dotenv": "^16.0.0",
     "ejs": "^3.1.7",
     "express": "^4.17.3",
+    "google-auth-library": "^8.0.1",
     "passport-google-oauth20": "^2.0.0"
   }
 }

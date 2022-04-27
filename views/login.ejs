@@ -13,8 +13,8 @@
       <label for="floatingPassword">Password</label>
     </div>
 
-    <a href="#" class="btn btn-dark"onclick="signOut();">Sign out</a>
     <div class="g-signin2 btn" data-onsuccess="onSignIn"></div>
+    <a href="#" class="btn btn-dark"onclick="signOut();">Sign out</a>
 
     <p class="mt-5 mb-3 text-muted">© 2022 - Ram</p>
   </form>
@@ -23,11 +23,17 @@
     <script>
 
     function onSignIn(googleUser) {
-      var profile = googleUser.getBasicProfile();
-        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-        console.log('Name: ' + profile.getName());
-        console.log('Image URL: ' + profile.getImageUrl());
-        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+      let id_token = googleUser.getAuthResponse().id_token;
+      let xhr = new XMLHttpRequest();
+      xhr.open("POST", "/login");
+      xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.onload = function() {
+        if (xhr.responseText === "Success") {
+          signOut();
+          location.assign("/dashboard");
+        }
+      };
+      xhr.send(JSON.stringify({token: id_token}));
     }
     </script>
 
@@ -35,7 +41,7 @@
 
 <script>
     function signOut() {
-      var auth2 = gapi.auth2.getAuthInstance();
+      let auth2 = gapi.auth2.getAuthInstance();
       auth2.signOut().then(function () {
         console.log('User signed out.');
       });

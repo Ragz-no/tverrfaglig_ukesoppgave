@@ -1,8 +1,10 @@
-<%-include("partials/header-signin.ejs");-%>
+<%-include("partials/header.ejs");-%>
 
-<h1>Test</h1>
+<h1>Hei <%= user.name %></h1>
 
-<a href="#" class="btn btn-dark"onclick="signOut();">Sign out</a>
+<img src="<%= user.picture %>" alt="">
+
+<a href="/logout" class="btn btn-dark">Sign Out</a> 
 
 <script>
     function signOut() {
