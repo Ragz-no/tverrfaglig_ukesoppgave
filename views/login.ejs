@@ -22,6 +22,7 @@
         if (xhr.responseText === "Success") {
           signOut();
           location.assign("/dashboard");
+          console.log("User signed in.");
         }
       };
       xhr.send(JSON.stringify({token: id_token}));
