@@ -69,6 +69,7 @@ app.post("/login", (req, res) => {
     res.render("dashboard", {user});
   });
 
+  //sletter session-cookies når bruker har loget ut 
   app.get("/logout", (req, res) => {
     res.clearCookie("session-token");
     res.redirect("/login");
@@ -99,7 +100,7 @@ app.post("/login", (req, res) => {
       })
 
 }
-
+// for å få appen til å kjøre på port 6969
 app.listen(PORT, () =>{
     console.log("Server started on port http://localhost:6969/");
 });
