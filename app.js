@@ -41,6 +41,7 @@ app.post("/login", (req, res) => {
 
   console.log(token); //logger user token som er masse random bokstaver og tall
 
+  //The verifyIdToken function verifies the JWT signature, the aud claim, the exp claim, and the iss claim.
 
   // Using a Google API Client Library
   async function verify() {
@@ -75,6 +76,8 @@ app.post("/login", (req, res) => {
     res.redirect("/login");
   });
 
+
+  //sjekker om brukeren er autorisert
   function checkAuthenticated(req, res, next){
 
     let token = req.cookies["session-token"];
