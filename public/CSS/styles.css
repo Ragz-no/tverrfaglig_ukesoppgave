@@ -6,10 +6,18 @@ body {
     background: #A7ABDD;
 }
 
+.username-dashboard {
+    margin-left: 2%;
+}
+
 .btn-signout-dashboard {
-    margin-left: 20%;
+    right: 0;
+    margin: 1%;
+    position: absolute;
+    top: 0;
 }
 
 .user-picture {
     margin-left: 10%;
+    border-radius: 50%;
 }

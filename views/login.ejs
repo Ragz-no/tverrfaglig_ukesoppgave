@@ -5,6 +5,7 @@
     <h1 class="h3 mb-3 fw-normal title-text">Logg inn med oAuth 2.0</h1>
 
     <div class="g-signin2 btn" data-onsuccess="onSignIn"></div>
+    <a href="/logout" class="btn btn-dark btn-signout-dashboard">Logg ut</a> 
 
     <p class="mt-5 mb-3 foorter-text">© 2022 - Ram</p>
 </form>
@@ -28,7 +29,15 @@
     </script>
 
 
+<script>
+    function signOut() {
+      var auth2 = gapi.auth2.getAuthInstance();
+      auth2.signOut().then(function () {
+        console.log('User signed out.');
+      });
+    }
+  </script>
 
-
-
+  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+  <script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
 <%-include("partials/footer.ejs");-%>

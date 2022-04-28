@@ -60,8 +60,8 @@ app.post("/login", (req, res) => {
   .then(()=> {
     res.cookie("session-token", token );
     res.send("Success");
-  }).
-  catch(console.error);
+  })
+  .catch(console.error);
   });
 
   app.get("/dashboard", checkAuthenticated, (req, res) => {
@@ -76,7 +76,7 @@ app.post("/login", (req, res) => {
 
   function checkAuthenticated(req, res, next){
 
-    let token = req.cookies['session-token'];
+    let token = req.cookies["session-token"];
 
     let user = {};
     async function verify() {
@@ -95,7 +95,7 @@ app.post("/login", (req, res) => {
           next();
       })
       .catch(err=>{
-          res.redirect('/login')
+          res.redirect("/login")
       })
 
 }

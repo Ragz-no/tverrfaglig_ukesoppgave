@@ -1,16 +1,8 @@
 <%-include("partials/header.ejs");-%>
 
-<h1>Hei <%= user.name %></h1>
+<h1 class="username-dashboard">Hei <%= user.name %></h1>
 
 <img src="<%= user.picture %>" class="user-picture" alt="">
-<h1><b>OAuth</b></h1>
-<p>Står for Open Authorization.<br>
-  Det gjør at internettbrukere <br>
-  kan gå inn på nettsteder eller <br>
-  applikasjoner uten å gi dem passordene deres</p>
-
-<h1><b>OAuth historie</b></h1>
-<p>OAuth ble laget av Blaine Cook i 2006, han var tidligere utvikleren for Twitter.</p>
 
 <a href="/logout" class="btn btn-dark btn-signout-dashboard">Logg ut</a> 
 
