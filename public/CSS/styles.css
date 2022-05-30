@@ -1,10 +1,5 @@
-html {
+html, body {
     font-family: 'Poppins', sans-serif;
-}
-
-body {
-    /* background: #A7ABDD; */
-    /* color: rgb(0, 0, 0); */
 }
 
 .username-dashboard {
