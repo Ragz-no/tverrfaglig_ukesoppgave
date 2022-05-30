@@ -8,7 +8,7 @@ body {
   align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #A7ABDD;
+  /* background-color: #A7ABDD; */
 }
 
 /* Alt som har med form å gjøre har form i seg */
@@ -19,28 +19,7 @@ body {
   margin: auto;
 }
 
-.form-signin .checkbox {
-  font-weight: 400;
-}
-
-.form-signin .form-floating:focus-within {
-  z-index: 2;
-}
-
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-
-/* alt annet en form signeringskjema */
-
+/* Bilde av Hugo */
 .bilde {
   height: 12.5rem;
   width: 12.5rem;
