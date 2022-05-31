@@ -76,6 +76,8 @@ app.post("/login", (req, res) => {
     res.redirect("/login");
   });
 
+  //slutt på async function
+
 
   //sjekker om brukeren er autorisert
   function checkAuthenticated(req, res, next){
@@ -93,7 +95,7 @@ app.post("/login", (req, res) => {
         user.email = payload.email;
         user.picture = payload.picture;
       }
-      verify()
+      verify() // caller på den funksjonen verify
       .then(()=>{
           req.user = user;
           next();
@@ -103,7 +105,7 @@ app.post("/login", (req, res) => {
       })
 
 }
-// for å få appen til å kjøre på port 6969
+// for å få web appen til å kjøre på port 6969
 app.listen(PORT, () =>{
     console.log("Server started on port http://localhost:6969/");
 });
