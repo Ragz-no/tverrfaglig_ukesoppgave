@@ -29,14 +29,20 @@ body {
   color: #0e0e0e;
 }
 
-a {
+#btn-to-home {
   text-decoration: none;
   color: #fff;
   background: black;
   padding: 2%;
 }
 
-a:hover {
+#btn-to-home:hover {
   cursor: pointer;
-  color: rgb(160, 156, 156);
+  color: yellow;
+}
+
+.fa-github{
+  font-size: 2rem;
+  cursor: pointer;
+  color: black;
 }

@@ -10,12 +10,14 @@ const cookieParser = require("cookie-parser");
 
 // Google auth
 const {OAuth2Client} = require('google-auth-library');
-const req = require("express/lib/request");
-const res = require("express/lib/response");
 const CLIENT_ID = process.env.CLIENT_ID;
 const client = new OAuth2Client(CLIENT_ID);
 
+// express npm
+const req = require("express/lib/request");
+const res = require("express/lib/response");
 const app = express();
+
 const PORT = process.env.PORT || 6969; // for å få localhost til å kjøre med portnr
 
 
@@ -23,8 +25,6 @@ const PORT = process.env.PORT || 6969; // for å få localhost til å kjøre med
 app.set('view engine', 'ejs');
 app.use(express.json()); // sender JSON til backend server
 app.use(cookieParser()); // lagrer uesr access user token
-
-
 app.use(express.static((__dirname,"public"))); // for å bruke statiske filer fra public folder
 
 //get request for å få sidene til å bli vist på localhost

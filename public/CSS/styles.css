@@ -17,3 +17,21 @@ html, body {
     margin-left: 10%;
     border-radius: 50%;
 }
+
+.footer-text {
+    margin-top: 10%;
+    bottom: 0;
+}
+
+footer {
+    text-align: center;
+}
+
+i {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: yellow;
+}

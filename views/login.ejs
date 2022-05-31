@@ -5,13 +5,14 @@
     <h1 class="h3 mb-3 fw-normal title-text">Logg inn med oAuth 2.0</h1>
 
     <!-- Google sign in button -->
-    <div class="g-signin2 btn" data-onsuccess="onSignIn"></div> <br> <br>
+    <div class="g-signin2 btn" data-onsuccess="onSignIn" data-width="220" data-height="40"></div> <br> <br>
 
     <!-- Til startsiden knapp -->
-    <a href="/">Til startside aka risikoanalyse</a>
+    <a id="btn-to-home" href="/">Til startside aka risikoanalyse</a>
 
-    <p class="mt-5 mb-3 foorter-text">© 2022 - Ram</p>
-</form>
+    <p class="mt-5 mb-3 footer-text text-center">© 2022 - Ram</p>
+    <a href="https://github.com/Ragz-no/tverrfaglig_ukesoppgave"><i class="fa-brands fa-github"></i></a>
+  </form>
   
   
   <script>
@@ -37,7 +38,7 @@
         if (xhr.responseText === "Success") {
           signOut();
           location.assign("/dashboard");
-          console.log("User signed in as: " + xhr.responseText);
+          console.log("User signed in as: " + xhr.responseText); // sier hvilken google bruker du er signet inn
         }
       };
       xhr.send(JSON.stringify({token: id_token}));
@@ -51,4 +52,3 @@
 
   <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
   <script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
-<%-include("partials/footer.ejs");-%>
