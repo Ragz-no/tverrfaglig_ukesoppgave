@@ -8,7 +8,7 @@ const ejs = require("ejs");
 const cookieParser = require("cookie-parser");
 
 
-// Google auth
+// Google auth libary for Node.js
 const {OAuth2Client} = require('google-auth-library');
 const CLIENT_ID = process.env.CLIENT_ID;
 const client = new OAuth2Client(CLIENT_ID);
@@ -20,12 +20,15 @@ const app = express();
 
 const PORT = process.env.PORT || 6969; // for å få localhost til å kjøre med portnr
 
+//Her settes EJS som view engine for express applikasjonen
+app.set('view engine', 'ejs');
+app.use(express.static((__dirname,"public"))); // for å bruke statiske filer fra public folder
+app.set("views", "../views") // gjør det mulig å få tilgang til denne mappen via HTTP
 
 //middleware
-app.set('view engine', 'ejs');
 app.use(express.json()); // sender JSON til backend server
 app.use(cookieParser()); // lagrer uesr access user token
-app.use(express.static((__dirname,"public"))); // for å bruke statiske filer fra public folder
+
 
 //get request for å få sidene til å bli vist på localhost
 app.get("/", (req, res) =>{
