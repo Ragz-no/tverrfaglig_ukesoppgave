@@ -22,8 +22,9 @@ const PORT = process.env.PORT || 6969; // for å få localhost til å kjøre med
 
 //Her settes EJS som view engine for express applikasjonen
 app.set('view engine', 'ejs');
-app.use(express.static((__dirname,"public"))); // for å bruke statiske filer fra public folder
+app.use(express.static((__dirname,"../public"))); // for å bruke statiske filer fra public folder
 app.set("views", "../views") // gjør det mulig å få tilgang til denne mappen via HTTP
+
 
 //middleware
 app.use(express.json()); // sender JSON til backend server
