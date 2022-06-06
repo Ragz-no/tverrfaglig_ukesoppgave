@@ -1,16 +1,16 @@
 <%-include("partials/header.ejs");-%>
 
-<h1 class="username-dashboard">Hei <%= user.name %></h1>
+<h1 class="username-dashboard">Hei <%= user.name %></h1> <!-- user.name er hentet fra payload i JS filen-->
 
-<img src="<%= user.picture %>" class="user-picture" alt="">
+<img src="<%= user.picture %>" class="user-picture" alt="Bilde av google bilde ditt">
 
 <a href="/logout" class="btn btn-dark btn-signout-dashboard">Logg ut</a> 
 
 <script>
     function signOut() {
-      var auth2 = gapi.auth2.getAuthInstance();
-      auth2.signOut().then(function () {
-        console.log('User signed out.');
+      let auth2 = gapi.auth2.getAuthInstance(); //hente auth2 objektet
+      auth2.signOut().then(function () { //signer ut brukeren
+        console.log('User signed out.'); //skriv ut at brukeren er logget ut
       });
     }
   </script>

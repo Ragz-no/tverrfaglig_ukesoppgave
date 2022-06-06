@@ -17,7 +17,7 @@
   
   <script>
   function signOut() {
-      var auth2 = gapi.auth2.getAuthInstance();
+      let auth2 = gapi.auth2.getAuthInstance();
       auth2.signOut().then(function () {
       console.log('User signed out.');
       });
@@ -28,20 +28,22 @@
     <script>
 
     function onSignIn(googleUser) {
-      let id_token = googleUser.getAuthResponse().id_token;
+      let id_token = googleUser.getAuthResponse().id_token; // Google ID token
+
       //ovenfor sier vi til serveren at hvis bruken har en vellykket sign in, skal vi hente user token
       //nedenfor, sender vi id token til serveren med en https post request
-      let xhr = new XMLHttpRequest();
-      xhr.open("POST", "/login");
-      xhr.setRequestHeader("Content-Type", "application/json");
-      xhr.onload = function() {
-        if (xhr.responseText === "Success") {
-          signOut();
-          location.assign("/dashboard");
-          console.log("User signed in as: " + xhr.responseText); // sier hvilken google bruker du er signet inn
+
+      let xhr = new XMLHttpRequest(); //oppretter en ny http request
+      xhr.open("POST", "/login"); //sender post request til /login
+      xhr.setRequestHeader("Content-Type", "application/json"); //sender med json
+      xhr.onload = function() { //når serveren har svart på requesten
+        if (xhr.responseText === "Success") { //hvis serveren svarer på requesten med "Success"
+          signOut(); //signer ut brukeren
+          location.assign("/dashboard"); //gå til dashboard
+          console.log("User signed in as: " + xhr.responseText); //skriv ut brukerens navn
         }
       };
-      xhr.send(JSON.stringify({token: id_token}));
+      xhr.send(JSON.stringify({token: id_token})); //sender id token til serveren
     }
     </script>
 
@@ -50,5 +52,5 @@
     You can retrieve data from a URL without having to do a full page refresh. 
     This enables a Web page to update just part of a page without disrupting what the user is doing.-->
 
-  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
-  <script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
+  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script> <!--Google sign in button -->
+  <script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>  <!-- Google sign in button --> 
