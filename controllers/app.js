@@ -58,7 +58,7 @@ app.post("/login", (req, res) => {
 
   const payload = ticket.getPayload(); // henter payload fra ticket
   const userid = payload["sub"]; // henter user id fra payload
-  console.log(payload); //logger payload som henter informasjon om din google konto
+  console.log(payload); //logger payload som henter informasjon om din google konto, forteller deg om 
   // If request specified a G Suite domain:
   // const domain = payload['hd'];
 }
@@ -78,7 +78,7 @@ verify() // caller på den funksjonen verify
     res.render("dashboard", {user}); // sender user objektet til dashboard.ejs
   });
 
-  //sletter session-cookies når bruker har loget ut 
+  //sletter session-cookies når bruker har logget ut 
   app.get("/logout", (req, res) => {
     res.clearCookie("session-token"); // sletter session-token
     res.redirect("/login"); // sender tilbake til login side
@@ -88,7 +88,7 @@ verify() // caller på den funksjonen verify
 
 
   //sjekker om brukeren er autorisert
-  function checkAuthenticated(req, res, next){  
+  function checkAuthenticated(req, res, next){  // Next callback argument to the middleware function, called "next" by convention.
 
     let token = req.cookies["session-token"]; 
 

@@ -13,9 +13,13 @@ html, body {
     top: 0;
 }
 
-.user-picture {
+#user-picture {
     margin-left: 10%;
     border-radius: 50%;
+}
+
+#email-dashboard {
+    margin-left: 20%;
 }
 
 .footer-text {
