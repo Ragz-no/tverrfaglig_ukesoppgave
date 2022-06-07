@@ -18,8 +18,6 @@ const req = require("express/lib/request"); // for å få tilgang til req.body
 const res = require("express/lib/response"); // express npm
 const app = express(); // middleware som sjekker om brukeren er autorisert
 
-const PORT = process.env.PORT || 6969; // for å få localhost til å kjøre med portnr
-
 //Her settes EJS som view engine for express applikasjonen
 app.set('view engine', 'ejs');
 app.use(express.static((__dirname,"../public"))); // for å bruke statiske filer fra public folder
@@ -115,6 +113,9 @@ app.post("/login", (req, res) => {
       })
 
 }
+
+const PORT = process.env.PORT || 6969; // for å få localhost til å kjøre med portnr
+
 // for å få web appen til å kjøre på port 6969
 app.listen(PORT, () =>{
     console.log("Server started on port http://localhost:6969/");
