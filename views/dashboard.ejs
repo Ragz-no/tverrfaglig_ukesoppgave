@@ -8,6 +8,128 @@
 
 <a href="/logout" class="btn btn-dark btn-signout-dashboard">Logg ut</a> 
 
+<div class="container">
+  <h1 class="display-3">Dokumentasjon av rammeverk<i class="fab fa-phoenix-framework fa-2x"></i></h1>
+  <hr>
+  <i class="fa-brands fa-node fa-3x"></i> 
+  <i class="fa-brands fa-bootstrap fa-3x"></i>
+  <i class="fa-brands fa-square-font-awesome fa-3x"></i>
+  <div class="brukte-rammeverk">
+    <p class="lead"><b>Brukte Rammeverk</b></p>
+    <li>Bootstrap</li>
+    <li>Node.js</li>
+    <li>Fontawesome</li>
+  </div>
+  <hr>
+  <section class="Risikoanalyse">
+    <p class="lead"><b>Risikoanalyse</b></p>
+    <p>Konkrete trusler kan komme forekomme hvis utvikleren har gjort en feil <br>
+       f.eks så kan man med et uhelle legge ut API nøkkelene til din discord <br>
+       bot på GitHub siden man glemte kanskje å lage .env fil også legge <br>
+       nøkkelen der også bruker .gitignore for å ignorere filen på opplasting. <br>
+    </p>
+
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>forklaring av en risiko</th>
+          <th>1 - svært lite sannsynlig</th>
+          <th>2 - lite sannsynlig</th>
+          <th>3 - sannsynlig</th>
+          <th>4 - ganske sannsynlig</th>
+          <th>5 - svært sannsynlig</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Sikkerheten</td>
+          <td>Hvor du vil plassere denne risikoanalysen</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>risikoanalyse 2</td>
+          <td>Hvor du vil plassere denne risikoanalysen</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>risikoanalyse 3</td>
+          <td>Hvor du vil plassere denne risikoanalysen</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <hr>
+  <section class="Rammeverk">
+    <p class="lead"><b>Rammeverksdokumentet belyser</b></p>
+    <p>Jeg bestemte meg for å bruke Google authentication rammeverket,<br>
+      fordi jeg tenkte det var det enkleste å bruke siden Angela viste hvordan <br>
+      man gjorde det i kurset og tenkte at jeg kunne følge henne men det gikk <br>
+      ikke så bra siden alt var outdatet og deprecated, så jeg valgte å følge <br>
+      YT tutorial som funka greit der jeg forsto det meste. Alt i alt var ikke <br>
+      det så vanskelig å ta i bruke Google sitt rammeverk siden man trenger bare <br>
+      nesten trenger å lese docsa til google authentication. </p>
+  </section>
+  <hr>
+  <section class="løsninger">
+    <p class="lead"><b>Begrunnelse på valgte løsninger</b></p>
+    <p>Jeg valgte å bruke Node.js rammeverket for å ta i bruk google sitt api rammeverk, <br>
+      slik at authentication pop up dukker opp og redirecter meg til en annen side, <br>
+      når bruker er authenticated, jeg valgte å bruke bootstrap fordi da slipper å <br>
+      skrive inn masse kode for å lage form på /login routen. Siden jeg bruker node.js <br>
+      kan ikke GitHub hoste nettsiden min siden den ikke er statisk lenger, så da valgte <br>
+      jeg å hoste den på heroku for å så fikse DNS med mitt eget domenenavn. </p>
+  </section>
+  <hr>
+  <section class="prosjektmetodikk">
+    <p class="lead"><b>Forklaring på hvorfor prosjektmetodikk er viktig</b></p>
+    <p>I prosjektmetodikk kan man definere målene sine på en oversiktlig måte,<br>
+       med f.eks basic kanban på GitHub projects.</p>
+  </section>
+  <hr>
+  <section class="konfigurasjon">
+    <p class="lead"><b>Dokumentasjon av valgt produksjonsløsning som er strukturert</b></p>
+    <p>Jeg valgte å hoste nettsiden på heroku siden de kan hoste <br> 
+      web apps og samtidig gi deg en lenke til appen din som er <br>
+      en kravene i oppgaven. I tillegg gjorde slik at når man <br>
+      skriver inn mitt eget domene (ramsingh.xyz) skal den <br>
+      automatisk redirecte til heroku lenken. På GitHub har <br>
+      jeg alle filene mine slik at jeg kan hente de derifra <br>
+      hvis det skulle skje noe med de.
+    </p>
+    <hr>
+    <p class="lead"><b>Dokumentasjon av valgt utviklingsløsning som er strukturert</b></p>
+    <p>Jeg valgte å bruke rammeverket node.js fordi det er <br>
+      det man bruker i kurset og passer best for å redirecte <br>
+      brukere til andre routes app.get() funksjonen. 
+    </p>
+  </section>
+  <hr>
+  <section class="sikkerhet-rammeverk">
+    <p class="lead"><b>Sikkerheten til Google authentication og hvordan det funker</b> <i class="fa-brands fa-google fa"></i></p>
+    <img src="Img/auth-overview.png" alt="google-auth-metode">
+  </section>
+  <hr>
+  <section class="OAuth-forklaring">
+    <p class="lead"><b>OAuth-forklaring</b></p>
+    <p>Står for Open Authorization.<br>
+      Det gjør at internettbrukere <br>
+      kan gå inn på nettsteder eller <br>
+      applikasjoner uten å gi dem passordene deres</p>
+
+    <p class="lead"><b>OAuth historie</b></p>
+    <p>OAuth ble laget av Blaine Cook i 2006, han var tidligere utvikleren for Twitter.</p>
+  </section>
+
 <script>
     function signOut() { // funksjon som logger ut
       let auth2 = gapi.auth2.getAuthInstance(); //hente auth2 objektet

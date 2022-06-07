@@ -31,8 +31,8 @@ app.use(cookieParser()); // lagrer uesr access user token
 
 //get request for å få sidene til å bli vist på localhost
 app.get("/", (req, res) =>{
-    res.render("home"); // viser home.ejs
-  }); 
+    res.render("login"); // viser lig.ejs
+}); 
   
 app.get("/login", (req, res) =>{   
     res.render("login"); // viser login.ejs
@@ -117,6 +117,6 @@ app.post("/login", (req, res) => {
 const PORT = process.env.PORT || 6969; // for å få localhost til å kjøre med portnr
 
 // for å få web appen til å kjøre på port 6969
-app.listen(PORT, () =>{
+app.listen(process.env.PORT || 6969, () =>{
     console.log("Server started on port http://localhost:6969/");
 });

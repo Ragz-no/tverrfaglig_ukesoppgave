@@ -29,18 +29,6 @@ body {
   color: #0e0e0e;
 }
 
-#btn-to-home {
-  text-decoration: none;
-  color: #fff;
-  background: black;
-  padding: 2%;
-}
-
-#btn-to-home:hover {
-  cursor: pointer;
-  color: yellow;
-}
-
 .fa-github{
   font-size: 2rem;
   cursor: pointer;

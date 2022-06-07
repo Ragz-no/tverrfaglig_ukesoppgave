@@ -39,3 +39,8 @@ i {
 .btn:hover {
     color: yellow;
 }
+
+.table {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
