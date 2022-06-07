@@ -54,7 +54,7 @@ app.post("/login", (req, res) => {
     audience: CLIENT_ID,  // Specify the CLIENT_ID of the app that accesses the backend
     // Or, if multiple clients access the backend:
     //[CLIENT_ID_1, CLIENT_ID_2, CLIENT_ID_3]
-});
+  });
 
   const payload = ticket.getPayload(); // henter payload fra ticket
   const userid = payload["sub"]; // henter user id fra payload
@@ -64,13 +64,15 @@ app.post("/login", (req, res) => {
 }
 
 
-verify() // caller på den funksjonen verify
-  verify() 
-  .then(()=> {
-    res.cookie("session-token", token ); // lagrer user token i cookie
-    res.send("Success"); // sender tilbake til login side
+  verify() // caller på den funksjonen verify
+    verify() 
+    .then(()=> {
+      res.cookie("session-token", token ); // lagrer user token i cookie
+      res.send("Success"); // sender tilbake til login side
   })
+
   .catch(console.error); // logger feilmelding
+
 });
 
   app.get("/dashboard", checkAuthenticated, (req, res) => {
